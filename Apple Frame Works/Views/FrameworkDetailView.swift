@@ -11,6 +11,7 @@ struct FrameworkDetailView: View {
     
     var Framework:Framework
     @Binding var isShowingDeailedView: Bool
+    @State private var isShowingSafariView: Bool = false
     
     var body: some View {
         
@@ -37,7 +38,7 @@ struct FrameworkDetailView: View {
                 .font(.body)
             Spacer()
             Button{
-                
+                isShowingSafariView = true
             }label: {
                 Text("Learn More")
                     .font(.title)
@@ -49,6 +50,9 @@ struct FrameworkDetailView: View {
             }
             
         }
+        .fullScreenCover(isPresented: $isShowingSafariView, content: {
+            SafariView(url: URL(string: Framework.urlString) ?? URL(string: "www.apple.com")!)
+        })
         
     }
 }

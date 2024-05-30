@@ -12,31 +12,35 @@ struct FrameworkGridView: View {
     // same as state
     @StateObject var viewModel = FrameworkGridViewModel()
     
-    let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
     var body: some View {
         
         NavigationView {
             
-            ScrollView{
+            ScrollView {
                 
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: viewModel.columns) {
                     
-                    ForEach(MockData.frameworks) { framework in
-                        
-                        FrameworkTitleView(Framework: framework)
-                            .onTapGesture {
+                    ForEach(MockData.frameworks) { 
+                        framework in FrameworkTitleView(Framework: framework).onTapGesture {
                                 viewModel.selectedFramework = framework
-                            }
+                        }
                     }
+                    
                 }
+                
             }
             .navigationTitle("Apple Frameworks")
             .sheet(isPresented: $viewModel.isShowingDetailedView, content: {
-                FrameworkDetailView(Framework: viewModel.selectedFramework ?? MockData.sampleFramework,isShowingDeailedView: $viewModel.isShowingDetailedView )
-            })
+                    FrameworkDetailView(Framework: viewModel.selectedFramework ?? MockData.sampleFramework,
+                                        isShowingDeailedView: $viewModel.isShowingDetailedView
+                    )
+                }
+            )
+            
         }
+        
     }
+    
 }
 
 #Preview {

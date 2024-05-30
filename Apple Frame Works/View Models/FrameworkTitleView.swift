@@ -12,17 +12,22 @@ struct FrameworkTitleView: View {
     let Framework: Framework
     
     var body: some View {
+        
         VStack{
+            
             Image(Framework.imageName)
                 .resizable()
-                .frame(width: 60, height: 60)
+                .frame(width: 70, height: 70)
             
             Text(Framework.name)
                 .font(.title2)
                 .fontWeight(.bold)
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
-        }.padding()
+        }
+        .padding()
+        
     }
+    
 }
 
