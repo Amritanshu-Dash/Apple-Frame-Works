@@ -13,6 +13,7 @@
 		8595A1512C087C78006A5535 /* Frameworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8595A1502C087C78006A5535 /* Frameworks.swift */; };
 		8595A1532C088467006A5535 /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8595A1522C088467006A5535 /* FrameworkGridView.swift */; };
 		8595A1552C088C38006A5535 /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8595A1542C088C38006A5535 /* FrameworkTitleView.swift */; };
+		85D4A30B2C08C34600861FB4 /* FrameworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D4A30A2C08C34600861FB4 /* FrameworkDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8595A1502C087C78006A5535 /* Frameworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frameworks.swift; sourceTree = "<group>"; };
 		8595A1522C088467006A5535 /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
 		8595A1542C088C38006A5535 /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
+		85D4A30A2C08C34600861FB4 /* FrameworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				8595A1422C087C21006A5535 /* Apple_Frame_WorksApp.swift */,
 				8595A1522C088467006A5535 /* FrameworkGridView.swift */,
+				85D4A30A2C08C34600861FB4 /* FrameworkDetailView.swift */,
 				8595A1542C088C38006A5535 /* FrameworkTitleView.swift */,
 				8595A1502C087C78006A5535 /* Frameworks.swift */,
 				8595A1462C087C24006A5535 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8595A1532C088467006A5535 /* FrameworkGridView.swift in Sources */,
+				85D4A30B2C08C34600861FB4 /* FrameworkDetailView.swift in Sources */,
 				8595A1432C087C21006A5535 /* Apple_Frame_WorksApp.swift in Sources */,
 				8595A1552C088C38006A5535 /* FrameworkTitleView.swift in Sources */,
 				8595A1512C087C78006A5535 /* Frameworks.swift in Sources */,
