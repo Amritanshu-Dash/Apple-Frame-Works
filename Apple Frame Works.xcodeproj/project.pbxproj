@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		856403ED2C19873A006074DB /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856403EC2C19873A006074DB /* FrameworkDetailViewModel.swift */; };
 		8595A1432C087C21006A5535 /* Apple_Frame_WorksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8595A1422C087C21006A5535 /* Apple_Frame_WorksApp.swift */; };
 		8595A1472C087C24006A5535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8595A1462C087C24006A5535 /* Assets.xcassets */; };
 		8595A14A2C087C24006A5535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8595A1492C087C24006A5535 /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		856403EC2C19873A006074DB /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
 		8595A13F2C087C21006A5535 /* Apple Frame Works.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Frame Works.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8595A1422C087C21006A5535 /* Apple_Frame_WorksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_Frame_WorksApp.swift; sourceTree = "<group>"; };
 		8595A1462C087C24006A5535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				8595A1542C088C38006A5535 /* FrameworkTitleView.swift */,
 				85D4A30C2C08D29B00861FB4 /* FrameworkGridViewModel.swift */,
+				856403EC2C19873A006074DB /* FrameworkDetailViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				8595A1552C088C38006A5535 /* FrameworkTitleView.swift in Sources */,
 				8595A1512C087C78006A5535 /* Frameworks.swift in Sources */,
 				85D4A30D2C08D29B00861FB4 /* FrameworkGridViewModel.swift in Sources */,
+				856403ED2C19873A006074DB /* FrameworkDetailViewModel.swift in Sources */,
 				85D4A30F2C08F5F200861FB4 /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

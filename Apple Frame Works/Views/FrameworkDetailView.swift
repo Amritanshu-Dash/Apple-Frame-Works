@@ -9,9 +9,8 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-    var Framework:Framework
-    @Binding var isShowingDeailedView: Bool
-    @State private var isShowingSafariView: Bool = false
+    //as we did not passed any value here so any time we create a view for framework detail view we have to pass the parameters of view model that creates a model at that time so thats why .. .. .
+    @ObservedObject var viewModel: FrameworkDetailViewModel
     
     var body: some View {
         
@@ -20,7 +19,8 @@ struct FrameworkDetailView: View {
             HStack{
                 Spacer()
                 Button{
-                    isShowingDeailedView = false
+                    // wrappedValue is the long way of doing it .. ..as @Binding is not in thaat except Binding<Bool> is there
+                    viewModel.isShowingDeailedView.wrappedValue = false
                 }label: {
                     Image(systemName: "xmark")
                         .foregroundColor(Color(.label))// white in dark mode and vis-a-vi
@@ -32,13 +32,13 @@ struct FrameworkDetailView: View {
             
           
             Spacer()
-            FrameworkTitleView(Framework: Framework)
-            Text(Framework.description)
+            FrameworkTitleView(Framework: viewModel.Framework)
+            Text(viewModel.Framework.description)
                 .padding()
                 .font(.body)
             Spacer()
             Button{
-                isShowingSafariView = true
+                viewModel.isShowingSafariView = true
             }label: {
                 Text("Learn More")
                     .font(.title)
@@ -50,13 +50,13 @@ struct FrameworkDetailView: View {
             }
             
         }
-        .fullScreenCover(isPresented: $isShowingSafariView, content: {
-            SafariView(url: URL(string: Framework.urlString) ?? URL(string: "www.apple.com")!)
+        .fullScreenCover(isPresented: $viewModel.isShowingSafariView, content: {
+            SafariView(url: URL(string: viewModel.Framework.urlString) ?? URL(string: "www.apple.com")!)
         })
         
     }
 }
 
 #Preview {
-    FrameworkDetailView(Framework: MockData.sampleFramework, isShowingDeailedView: .constant(false))
+    FrameworkDetailView(viewModel: FrameworkDetailViewModel(Framework: MockData.sampleFramework, isShowingDeailedView: .constant(false), isShowingSafariView: true))
 }
