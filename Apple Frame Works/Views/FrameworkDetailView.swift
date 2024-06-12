@@ -37,22 +37,33 @@ struct FrameworkDetailView: View {
                 .padding()
                 .font(.body)
             Spacer()
-            Button{
-                viewModel.isShowingSafariView = true
-            }label: {
-                Text("Learn More")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .frame(width: 200, height: 50)
-                    .background(.pink)
-                    .foregroundStyle(.mint)
-                    .cornerRadius(23.0)
-            }
+            //This thing dierectly opens safari app and not in app safari view
+            Link( destination: URL(string: viewModel.Framework.urlString) ?? URL(string: "www.apple.com")!,
+                  label: {
+                    Text("Learn More")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .frame(width: 200, height: 50)
+                        .background(.pink)
+                        .foregroundStyle(.mint)
+                        .cornerRadius(23.0)
+                })
+//            Button{
+//                viewModel.isShowingSafariView = true
+//            }label: {
+//                Text("Learn More")
+//                    .font(.title)
+//                    .fontWeight(.semibold)
+//                    .frame(width: 200, height: 50)
+//                    .background(.pink)
+//                    .foregroundStyle(.mint)
+//                    .cornerRadius(23.0)
+//            }
             
         }
-        .fullScreenCover(isPresented: $viewModel.isShowingSafariView, content: {
-            SafariView(url: URL(string: viewModel.Framework.urlString) ?? URL(string: "www.apple.com")!)
-        })
+//        .fullScreenCover(isPresented: $viewModel.isShowingSafariView, content: {
+//            SafariView(url: URL(string: viewModel.Framework.urlString) ?? URL(string: "www.apple.com")!)
+//        })
         
     }
 }
